@@ -1,4 +1,4 @@
-// swift-tools-version:5.7
+// swift-tools-version: 6.2
 //===----------------------------------------------------------------------===//
 //
 // This source file is part of the Swift Algorithms open source project
@@ -14,13 +14,14 @@ import PackageDescription
 
 let package = Package(
   name: "swift-algorithms",
+	platforms: [.iOS(.v12), .watchOS(.v9), .tvOS(.v15), .macOS(.v12)],
   products: [
     .library(
       name: "Algorithms",
       targets: ["Algorithms"])
   ],
   dependencies: [
-    .package(url: "https://github.com/apple/swift-numerics.git", from: "1.0.0")
+    .package(url: "https://github.com/importRyan/swift-numerics", revision: "efcce417c886aa3bc6da35b06dd708bada6147a5")
   ],
   targets: [
     .target(
